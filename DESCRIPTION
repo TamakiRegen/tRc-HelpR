@@ -1,0 +1,15 @@
+Package: trc
+Title: tRc HelpR
+Version: 0.0.0.9000
+Authors@R: 
+    person("John", "Chapman", , "john.chapman@tamakiregeneration.co.nz", role = c("aut", "cre"))
+Description: A package of helper functions for TRC data analysis, including saving and loading timestamped files, SA2 filtering, bizday calculations and FY mutations.
+License: `use_mit_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 8.0.0
+Imports:
+    dplyr,
+    bizdays,
+    here,
+    stringr

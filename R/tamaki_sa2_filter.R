@@ -4,7 +4,7 @@
 #' the Tamaki Regeneration area.
 #' 
 #' @param data The dataframe that contains SA2 codes that you want filtered.
-#' @param col The column in df containing CEN23_GEO_002 SA2 codes.
+#' @param col The column in df containing  SA2 codes.
 #' @return A filtered dataframe that only contains SA2 codes for Tamaki.
 #' @importFrom dplyr filter
 #' @export

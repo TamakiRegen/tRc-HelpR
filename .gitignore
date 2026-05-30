@@ -4,3 +4,5 @@
 .httr-oauth
 .DS_Store
 .quarto
+geographic-areas-table-2026.csv
+sa2_codes.R

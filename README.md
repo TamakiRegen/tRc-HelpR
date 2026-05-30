@@ -184,9 +184,9 @@ rehousing_data <- rehousing_data %>%
 print(rehousing_data)
 #>                           address current_bedrooms required_bedrooms
 #> 1              31 Big John Street                2                 3
-#> 2              25 Big John Street                3                 3
-#> 3              44 Big John Street                3                 2
-#> 4   32 Moderately-sized John Road                4                 4
+#> 2              25 Big John Street                3                 5
+#> 3              44 Big John Street                3                 3
+#> 4   32 Moderately-sized John Road                4                 2
 #> 5                76 Wee John Lane                1                 1
 #> 6 8 F**king Massive John Crescent                7                 7
 #> 7       1 Extra Medium John Place                0                 0
@@ -218,8 +218,22 @@ colours.
 library(trc)
  
 trc::hex()
-#> [1] "#2A7DE2" "#15D3C5" "#F1636E" "#60269E" "#FF7F30"
+#> # A tibble: 5 × 2
+#>   hex_code colour          
+#>   <chr>    <chr>           
+#> 1 #2A7DE2  Blue            
+#> 2 #15D3C5  Bright Turquoise
+#> 3 #F1636E  Red             
+#> 4 #60269E  Purple          
+#> 5 #FF7F30  Orange
 
 trc::hex("light")
-#> [1] "#7fb1ee" "#73e5dc" "#f7a1a8" "#a07dc5" "#ffb283"
+#> # A tibble: 5 × 2
+#>   hex_code colour         
+#>   <chr>    <chr>          
+#> 1 #7fb1ee  Light Blue     
+#> 2 #73e5dc  Light Turquoise
+#> 3 #f7a1a8  Pink           
+#> 4 #a07dc5  Light Purple   
+#> 5 #ffb283  Light Orange
 ```

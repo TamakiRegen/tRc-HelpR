@@ -116,9 +116,15 @@ This function takes the [Rehousing Matrix](https://github.com/TamakiRegen/rh_mat
 library(trc)
 
 rehousing_data <- data.frame(
-  address = c('1 Big John Street', '2 Big John Street', '3 Big John Street', '4 Big John Street',
-  '5 Big John Street', '6 Big John Street', '1 Extra Medium John Place', '3 Extra Medium John Place'),
-  current_bedrooms = c(2,3,3,4,1,7,0,5)
+  address = c('31 Big John Street', 
+              '25 Big John Street', 
+              '44 Big John Street', 
+              '32 Moderately-sized John Road',
+              '76 Wee John Lane', 
+              '8 F**king Massive John Crescent', 
+              '1 Extra Medium John Place', 
+              '3 Extra Medium John Place'),
+  current_bedrooms = c(2, 3, 3, 4, 1, 7, 0, 5)
 )
 
 rehousing_data <- rehousing_data %>% 
@@ -133,16 +139,16 @@ print(rehousing_data)
  - The code doesn't know the exact circumstances of the whanau in each home, and therefore provides an **indicative best guess** at what bedroom typologies will be required.
  - Because of this, the **outputs are for planning purposes only, and need to be validated with THA before being operationalised.**
 
- ## Hex Codes
- This offers a quick way of printing TRC brand colour hex codes in the console. These can then be copied into `ase()`arguments for visualisations.
+## Hex Codes
+This offers a quick way of printing TRC brand colour hex codes in the console. These can then be copied into `ase()`arguments for visualisations.
 
- The library defaults to TRC's standard colours, but the parameter "light" can be entered to get a lighter shade of each of the five brand colours.
+The library defaults to TRC's standard colours, but the parameter "light" can be entered to get a lighter shade of each of the five brand colours.
 
- ```{r hex_demo}
- library(trc)
+```{r hex_demo}
+library(trc)
  
- trc::hex()
+trc::hex()
 
- trc::hex("light")
- ```
+trc::hex("light")
+```
 

@@ -745,24 +745,30 @@ the matrix.</li>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">library</span>(trc)</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>rehousing_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a> <span class="at">address =</span> <span class="fu">c</span>(<span class="st">&#39;1 Big John Street&#39;</span>, <span class="st">&#39;2 Big John Street&#39;</span>, <span class="st">&#39;3 Big John Street&#39;</span>, <span class="st">&#39;4 Big John Street&#39;</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a> <span class="st">&#39;5 Big John Street&#39;</span>, <span class="st">&#39;6 Big John Street&#39;</span>, <span class="st">&#39;1 Extra Medium John Place&#39;</span>, <span class="st">&#39;3 Extra Medium John Place&#39;</span>),</span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a> <span class="at">current_bedrooms =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">0</span>,<span class="dv">5</span>)</span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>)</span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>rehousing_data <span class="ot">&lt;-</span> rehousing_data <span class="sc">%&gt;%</span> </span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a> <span class="fu">mutate</span>(<span class="at">required_bedrooms =</span> trc<span class="sc">::</span><span class="fu">rh_matrix</span>(current_bedrooms))</span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a><span class="fu">print</span>(rehousing_data)</span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a><span class="co">#&gt;                     address current_bedrooms required_bedrooms</span></span>
-<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a><span class="co">#&gt; 1         1 Big John Street                2                 2</span></span>
-<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="co">#&gt; 2         2 Big John Street                3                 3</span></span>
-<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="co">#&gt; 3         3 Big John Street                3                 3</span></span>
-<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a><span class="co">#&gt; 4         4 Big John Street                4                 4</span></span>
-<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a><span class="co">#&gt; 5         5 Big John Street                1                 1</span></span>
-<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a><span class="co">#&gt; 6         6 Big John Street                7                 7</span></span>
-<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a><span class="co">#&gt; 7 1 Extra Medium John Place                0                 0</span></span>
-<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a><span class="co">#&gt; 8 3 Extra Medium John Place                5                 3</span></span></code></pre></div>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a> <span class="at">address =</span> <span class="fu">c</span>(<span class="st">&#39;31 Big John Street&#39;</span>, </span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>             <span class="st">&#39;25 Big John Street&#39;</span>, </span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>             <span class="st">&#39;44 Big John Street&#39;</span>, </span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>             <span class="st">&#39;32 Moderately-sized John Road&#39;</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>             <span class="st">&#39;76 Wee John Lane&#39;</span>, </span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>             <span class="st">&#39;8 F**king Massive John Crescent&#39;</span>, </span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>             <span class="st">&#39;1 Extra Medium John Place&#39;</span>, </span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>             <span class="st">&#39;3 Extra Medium John Place&#39;</span>),</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a> <span class="at">current_bedrooms =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">0</span>, <span class="dv">5</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>)</span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a>rehousing_data <span class="ot">&lt;-</span> rehousing_data <span class="sc">%&gt;%</span> </span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a> <span class="fu">mutate</span>(<span class="at">required_bedrooms =</span> trc<span class="sc">::</span><span class="fu">rh_matrix</span>(current_bedrooms))</span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a><span class="fu">print</span>(rehousing_data)</span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a><span class="co">#&gt;                           address current_bedrooms required_bedrooms</span></span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a><span class="co">#&gt; 1              31 Big John Street                2                 3</span></span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a><span class="co">#&gt; 2              25 Big John Street                3                 3</span></span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a><span class="co">#&gt; 3              44 Big John Street                3                 2</span></span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a><span class="co">#&gt; 4   32 Moderately-sized John Road                4                 4</span></span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a><span class="co">#&gt; 5                76 Wee John Lane                1                 1</span></span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a><span class="co">#&gt; 6 8 F**king Massive John Crescent                7                 7</span></span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a><span class="co">#&gt; 7       1 Extra Medium John Place                0                 0</span></span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a><span class="co">#&gt; 8       3 Extra Medium John Place                5                 3</span></span></code></pre></div>
 <h3 id="other-things-to-note">Other things to note</h3>
 <ul>
 <li>The results will be different each time you run it as the function
@@ -775,14 +781,15 @@ at what bedroom typologies will be required.</li>
 and need to be validated with THA before being
 operationalised.</strong></li>
 </ul>
-<p>## Hex Codes This offers a quick way of printing TRC brand colour hex
-codes in the console. These can then be copied into
-<code>ase()</code>arguments for visualisations.</p>
+<h2 id="hex-codes">Hex Codes</h2>
+<p>This offers a quick way of printing TRC brand colour hex codes in the
+console. These can then be copied into <code>ase()</code>arguments for
+visualisations.</p>
 <p>The library defaults to TRC’s standard colours, but the parameter
 “light” can be entered to get a lighter shade of each of the five brand
 colours.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">library</span>(trc)</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a> </span>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>trc<span class="sc">::</span><span class="fu">hex</span>()</span>
 <span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="co">#&gt; [1] &quot;#2A7DE2&quot; &quot;#15D3C5&quot; &quot;#F1636E&quot; &quot;#60269E&quot; &quot;#FF7F30&quot;</span></span>
 <span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a></span>

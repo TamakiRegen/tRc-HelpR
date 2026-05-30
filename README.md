@@ -167,24 +167,30 @@ value.
 library(trc)
 
 rehousing_data <- data.frame(
- address = c('1 Big John Street', '2 Big John Street', '3 Big John Street', '4 Big John Street',
- '5 Big John Street', '6 Big John Street', '1 Extra Medium John Place', '3 Extra Medium John Place'),
- current_bedrooms = c(2,3,3,4,1,7,0,5)
+ address = c('31 Big John Street', 
+             '25 Big John Street', 
+             '44 Big John Street', 
+             '32 Moderately-sized John Road',
+             '76 Wee John Lane', 
+             '8 F**king Massive John Crescent', 
+             '1 Extra Medium John Place', 
+             '3 Extra Medium John Place'),
+ current_bedrooms = c(2, 3, 3, 4, 1, 7, 0, 5)
 )
 
 rehousing_data <- rehousing_data %>% 
  mutate(required_bedrooms = trc::rh_matrix(current_bedrooms))
 
 print(rehousing_data)
-#>                     address current_bedrooms required_bedrooms
-#> 1         1 Big John Street                2                 2
-#> 2         2 Big John Street                3                 3
-#> 3         3 Big John Street                3                 3
-#> 4         4 Big John Street                4                 4
-#> 5         5 Big John Street                1                 1
-#> 6         6 Big John Street                7                 7
-#> 7 1 Extra Medium John Place                0                 0
-#> 8 3 Extra Medium John Place                5                 3
+#>                           address current_bedrooms required_bedrooms
+#> 1              31 Big John Street                2                 3
+#> 2              25 Big John Street                3                 3
+#> 3              44 Big John Street                3                 2
+#> 4   32 Moderately-sized John Road                4                 4
+#> 5                76 Wee John Lane                1                 1
+#> 6 8 F**king Massive John Crescent                7                 7
+#> 7       1 Extra Medium John Place                0                 0
+#> 8       3 Extra Medium John Place                5                 3
 ```
 
 ### Other things to note
@@ -198,8 +204,10 @@ print(rehousing_data)
 - Because of this, the **outputs are for planning purposes only, and
   need to be validated with THA before being operationalised.**
 
-\## Hex Codes This offers a quick way of printing TRC brand colour hex
-codes in the console. These can then be copied into `ase()`arguments for
+## Hex Codes
+
+This offers a quick way of printing TRC brand colour hex codes in the
+console. These can then be copied into `ase()`arguments for
 visualisations.
 
 The library defaults to TRC’s standard colours, but the parameter
@@ -208,7 +216,7 @@ colours.
 
 ``` r
 library(trc)
-
+ 
 trc::hex()
 #> [1] "#2A7DE2" "#15D3C5" "#F1636E" "#60269E" "#FF7F30"
 

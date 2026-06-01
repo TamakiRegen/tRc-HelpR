@@ -22,6 +22,12 @@ data cleaning and analysis.
   - [Other Things to Note](#other-things-to-note)
 - [Hex Codes](#hex-codes)
 
+## Pipeline
+
+- Add business days function to make Basis of Programme bizdays calcs easier.
+- Address cleaning function
+- Function to fix barred addresses displaying as excel dates (e.g. 1/3 Fenchurch)
+
 ## Installation
 
 You can install the development version of tRc from

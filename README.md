@@ -35,7 +35,7 @@ You can install the development version of tRc from
 
 ``` r
 # install.packages("pak")
-pak::pak("TamakiRegen/trc")
+pak::pak("TamakiRegen/tRc-HelpR")
 ```
 
 ## Date to FY Quarter
